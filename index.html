@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jarvis</title>
+  <meta name="description" content="Jarvis — assistente pessoal de suporte N2 e logística">
+  <meta name="theme-color" content="#070b16">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="components.css">
+</head>
+<body>
+  <div class="bg-fx" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="grid-fx"></span></div>
+  <div id="app">
+    <aside id="sidebar"></aside>
+    <div id="overlay"></div>
+    <div id="main">
+      <header id="header"></header>
+      <main id="view"></main>
+    </div>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root"></div>
+
+  <!-- Núcleo (ordem importa: app -> icons -> storage -> crud -> find -> ferramentas -> navigation) -->
+  <script src="app.js"></script>
+  <script src="icons.js"></script>
+  <script src="storage.js"></script>
+  <script src="crud.js"></script>
+  <script src="find.js"></script>
+
+  <!-- Módulos: cada arquivo chama N2.register({...}) ou N2.collection({...}).
+       Para adicionar um novo, crie o arquivo em /js e inclua a tag <script> aqui. -->
+  <script src="pages.js"></script>
+  <!-- Meu Workspace -->
+  <script src="notes.js"></script>
+  <script src="cases.js"></script>
+  <script src="templates.js"></script>
+  <script src="checklists.js"></script>
+  <script src="knowledge.js"></script>
+  <!-- Ferramentas -->
+  <script src="ocr.js"></script>
+  <script src="json-tools.js"></script>  <!-- N2.json (parser) -->
+  <script src="xml-tools.js"></script>   <!-- N2.xml (parser) -->
+  <script src="compare.js"></script>
+  <script src="payload.js"></script>
+  <script src="utilities.js"></script>
+  <!-- Diagnóstico -->
+  <script src="diagnosis.js"></script>
+  <script src="errors.js"></script>
+  <script src="logistics.js"></script>
+
+  <script src="navigation.js"></script>
+</body>
+</html>
